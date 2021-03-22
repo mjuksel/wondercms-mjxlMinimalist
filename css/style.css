@@ -1,0 +1,83 @@
+:root {
+	--s: 240px;
+	--gap: 0.5em 1em;
+	--template: repeat(auto-fit, minmax(var(--s), 1fr));
+}
+
+#save,
+#cache {
+	display: none;
+}
+
+ul > a {
+	justify-self: right;
+}
+
+/* ul > a::after {
+	content: '⚙ Settings';
+} */
+
+section,
+footer {
+	width: 100%;
+	display: block !important;
+	place-items: unset !important;
+	place-content: unset !important;
+}
+
+body {
+	max-width: 1000px;
+	display: block;
+	overflow: unset;
+}
+
+.tab-pane {
+	display: none;
+}
+
+.tab-pane.active {
+	display: grid;
+	/* grid-template: 1fr / 10rem auto; */
+}
+
+.nav.nav-tabs {
+	display: grid;
+	place-items: center;
+	grid-template: 1fr / repeat(6, auto);
+	margin: 1em 0;
+}
+
+.custom-cards {
+	--s: 100px;
+	display: grid;
+	grid-template: 1fr / var(--template);
+	gap: 10px;
+	margin: 10px;
+}
+
+#currentPage,
+#menu,
+#files,
+#security {
+	grid-template: 1fr / auto 1fr;
+	gap: 0.5em 1em;
+}
+
+[title='Delete page'] {
+	padding: 0.5em 1em;
+}
+
+#menuSettings {
+	display: grid;
+	gap: var(--gap);
+	grid-template-areas: 'A' 'B';
+}
+
+nav ul li, section, footer, video {
+	opacity: 1;
+	transform: unset !important;
+}
+
+#menuSettings > #menuItemAdd {
+	grid-area: B;
+}

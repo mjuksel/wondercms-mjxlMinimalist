@@ -1,0 +1,129 @@
+/* start of meyer.css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of meyer.css reset */
+
+body {
+	width: 80vw;
+	height: 100vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	overflow: hidden;
+}
+
+nav li {
+	display: inline;
+	transform: translateY(-100px);
+}
+
+nav ul {
+	padding-inline-start: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 5em);
+	place-items: center;
+	margin: 1em 0;
+}
+
+nav li,
+footer {
+	opacity: 0;
+}
+
+video {
+	width: 100%;
+}
+
+section {
+	display: grid;
+	place-content: center;
+	transform: scale(0);
+	overflow-y: auto;
+}
+
+section li {
+	list-style-type: circle;
+}
+
+section li {
+	margin-left: 2rem !important;
+}
+
+aside,
+textarea,
+#subside,
+#content {
+	width: 100%;
+}
+
+footer {
+	display: grid;
+	place-items: end;
+	margin: 1em 0;
+	width: inherit;
+}
+
+footer > #footer {
+	width: inherit;
+	display: inherit;
+	text-align: end;
+}
+
+.loader-overlay,
+section > #login {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	place-items: center;
+	place-content: center;
+	background-color: #000000bf !important;
+	color: #fafafa !important;
+	z-index: 9999;
+	height: 100vh !important;
+	width: 100vw !important;
+	padding: 0 !important;
+	top: 0;
+	left: 0;
+}
