@@ -13,10 +13,6 @@ ul > a {
 	justify-self: right;
 }
 
-/* ul > a::after {
-	content: '⚙ Settings';
-} */
-
 section,
 footer {
 	width: 100%;
@@ -37,7 +33,6 @@ body {
 
 .tab-pane.active {
 	display: grid;
-	/* grid-template: 1fr / 10rem auto; */
 }
 
 .nav.nav-tabs {
@@ -80,4 +75,12 @@ nav ul li, section, footer, video {
 
 #menuSettings > #menuItemAdd {
 	grid-area: B;
+}
+
+#adminPanel {
+	display: block;
+}
+
+[title="Logout"]:before {
+	content: 'Logout';
 }
